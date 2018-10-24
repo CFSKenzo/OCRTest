@@ -90,6 +90,7 @@
             this.Button_StopStreaming.TabIndex = 1;
             this.Button_StopStreaming.Text = "Stop Streaming";
             this.Button_StopStreaming.UseVisualStyleBackColor = true;
+            this.Button_StopStreaming.Click += new System.EventHandler(this.Button_StopStreaming_Click);
             // 
             // TextBox_Result
             // 
