@@ -102,10 +102,11 @@ namespace OCRTest
 
         private void Button_DoOCR_Click(object sender, EventArgs e)
         {
+            LibUtility.ClassUtility.S_OCR_Result t_temp = LibUtility.ClassUtility.DoReconizeOCR(ref m_Tesseract, m_ProcessedImage);
             m_Tesseract.SetImage(m_ProcessedImage);
             m_Tesseract.Recognize();
             Emgu.CV.OCR.Tesseract.Character[] characters = m_Tesseract.GetCharacters();
-            TextBox_Result.Text = m_Tesseract.GetOsdText() ;
+            TextBox_Result.Text = m_Tesseract.GetUTF8Text() ;
 
         }
 
